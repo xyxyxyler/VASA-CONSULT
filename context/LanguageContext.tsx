@@ -19,6 +19,7 @@ const translations: Translations = {
     'nav.contact': { en: 'Contact us', fr: 'Contactez-nous' },
 
     // Hero
+    'hero.prefix': { en: 'Excellence in', fr: 'L\'excellence en' },
     'hero.headline': { en: 'Language Services, Education & Business Support', fr: 'Services Linguistiques, Éducation et Soutien aux Entreprises' },
     'hero.subtext': { en: 'Plan and host monthly virtual seminars for French learners across Africa and the diaspora.', fr: 'Planifiez et organisez des séminaires virtuels mensuels pour les apprenants de français à travers l\'Afrique et la diaspora.' },
     'hero.cta.services': { en: 'Our Services', fr: 'Nos Services' },

@@ -7,6 +7,20 @@ import { useLanguage } from '../context/LanguageContext';
 
 export const Hero: React.FC = () => {
     const { t } = useLanguage();
+    const [currentSlide, setCurrentSlide] = React.useState(0);
+
+    React.useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentSlide((prev) => (prev + 1) % 3);
+        }, 5000);
+        return () => clearInterval(timer);
+    }, []);
+
+    const slides = [
+        { title: t('hero.slide1.title'), subtext: t('hero.slide1.subtext') },
+        { title: t('hero.slide2.title'), subtext: t('hero.slide2.subtext') },
+        { title: t('hero.slide3.title'), subtext: t('hero.slide3.subtext') },
+    ];
 
     return (
         <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
@@ -15,7 +29,7 @@ export const Hero: React.FC = () => {
                 <img
                     src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
                     alt="Global Connection"
-                    className="w-full h-full object-cover opacity-40"
+                    className="w-full h-full object-cover opacity-40 transition-transform duration-[20s] ease-linear scale-110 animate-pulse"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-brand-black/95 via-brand-black/80 to-brand-black" />
             </div>
@@ -28,14 +42,27 @@ export const Hero: React.FC = () => {
 
                         {/* H1 Heading */}
                         <div className="mb-12">
-                            <div className="flex items-center gap-4 mb-2">
-                                <div className="w-4 h-4 rounded-full bg-white hidden sm:block"></div>
-                                <div className="w-4 h-4 rounded-full border border-white hidden sm:block"></div>
+                            {/* Slider Indicators */}
+                            <div className="flex items-center gap-2 mb-6">
+                                {[0, 1, 2].map((i) => (
+                                    <button
+                                        key={i}
+                                        onClick={() => setCurrentSlide(i)}
+                                        className={`w-3 h-3 rounded-full transition-all duration-300 ${currentSlide === i ? 'bg-brand-beige w-8' : 'bg-white/20 hover:bg-white/40'}`}
+                                    />
+                                ))}
                             </div>
-                            <h1 className="text-5xl md:text-7xl xl:text-8xl font-medium tracking-tight text-white leading-[1.1]">
-                                {t('hero.headline').split(',')[0]} <br />
-                                <span className="text-gray-400">Language & Business</span> <br />
-                                <span className="flex items-center gap-4 flex-wrap">
+
+                            <h1 className="text-5xl md:text-7xl xl:text-8xl font-medium tracking-tight text-white leading-[1.1] min-h-[3.3em]">
+                                {t('hero.prefix')} <br />
+
+                                <div className="relative overflow-hidden">
+                                    <div key={currentSlide} className="animate-fade-in-up">
+                                        <span className="text-gray-400 block">{slides[currentSlide].title}</span>
+                                    </div>
+                                </div>
+
+                                <span className="flex items-center gap-4 flex-wrap mt-2">
                                     Solutions
                                     {/* Floating Action Buttons inline */}
                                     <div className="inline-flex items-center gap-2 align-middle ml-2">
@@ -54,10 +81,10 @@ export const Hero: React.FC = () => {
                         </div>
 
                         {/* Subtext */}
-                        <div className="flex flex-col md:flex-row gap-6 md:gap-12 mb-12 max-w-2xl">
-                            <span className="text-gray-500 font-mono">/001</span>
-                            <p className="text-gray-300 text-lg leading-relaxed">
-                                {t('hero.subtext')}
+                        <div className="flex flex-col md:flex-row gap-6 md:gap-12 mb-12 max-w-2xl min-h-[5em]">
+                            <span className="text-gray-500 font-mono">/00{currentSlide + 1}</span>
+                            <p className="text-gray-300 text-lg leading-relaxed animate-fade-in">
+                                {slides[currentSlide].subtext} <span className="text-white">Connecting Africa and the diaspora through language.</span>
                             </p>
                         </div>
 
