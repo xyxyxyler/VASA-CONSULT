@@ -32,22 +32,30 @@ export const Reviews: React.FC = () => {
     ];
 
     return (
-        <section id="reviews" className="px-6 md:px-12 py-24 max-w-8xl mx-auto border-t border-white/10">
-            <h2 className="text-3xl md:text-4xl font-medium mb-16 text-center">{t('reviews.title')}</h2>
+        <section id="reviews" className="px-6 md:px-12 py-12 max-w-8xl mx-auto border-t border-white/5">
+            <h2 className="text-sm uppercase tracking-widest text-brand-beige mb-8 text-center font-medium">{t('reviews.title')}</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div 
+                className="flex overflow-x-auto gap-4 pb-4 snap-x"
+                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
+                {/* Custom styling to hide scrollbar for webkit built-in browsers if needed */}
+                <style dangerouslySetInnerHTML={{__html: `
+                    #reviews div::-webkit-scrollbar { display: none; }
+                `}} />
+
                 {reviews.map((review, i) => (
-                    <div key={i} className="flex flex-col justify-between p-8 rounded-3xl bg-[#151515] hover:bg-[#1a1a1a] transition-colors relative">
-                        <div className="mb-8">
-                            <svg className="w-8 h-8 text-brand-beige/20 mb-6" fill="currentColor" viewBox="0 0 24 24">
+                    <div key={i} className="flex flex-col justify-between p-6 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors relative w-[300px] md:w-[350px] shrink-0 snap-start">
+                        <div className="mb-6">
+                            <svg className="w-5 h-5 text-brand-beige/30 mb-4" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z" />
                             </svg>
-                            <p className="text-gray-300 leading-relaxed">"{review.quote}"</p>
+                            <p className="text-gray-400 text-sm leading-relaxed line-clamp-6">"{review.quote}"</p>
                         </div>
-                        <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-3 border-t border-white/5 pt-4">
                             <div>
-                                <h4 className="text-white font-medium text-lg">{review.author}</h4>
-                                {review.role && <p className="text-sm text-brand-beige mt-1">{review.role}</p>}
+                                <h4 className="text-white text-sm font-medium">{review.author}</h4>
+                                {review.role && <p className="text-xs text-brand-beige mt-0.5">{review.role}</p>}
                             </div>
                         </div>
                     </div>
