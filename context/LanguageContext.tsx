@@ -154,6 +154,7 @@ const translations: Translations = {
     'booking.headline': { en: 'Ready to Leverage \nYour Language?', fr: 'Prêt à Exploiter \nVotre Langue ?' },
     'booking.desc': { en: 'Whether you’re a multilingual professional ready to build visibility, an organization seeking bilingual talent, or a partner exploring cross-border collaboration — let’s work together.', fr: 'Que vous soyez un professionnel multilingue prêt à accroître sa visibilité, une organisation recherchant des talents bilingues ou un partenaire explorant une collaboration transfrontalière — travaillons ensemble.' },
     'booking.cta.call': { en: 'Book a Strategy Call', fr: 'Réserver un Appel Stratégique' },
+    'booking.cta.book': { en: 'Book a Call', fr: 'Réserver un Appel' },
     'booking.cta.join': { en: 'Join Speak French, Shine Online', fr: 'Rejoignez Parlez Français, Brillez en Ligne' },
     'booking.cta.contact': { en: 'Contact Us', fr: 'Nous Contacter' },
 
@@ -254,6 +255,10 @@ const translations: Translations = {
     'seminar.community.next_steps': { en: 'Next Steps for the Community:', fr: 'Prochaines étapes pour la communauté :' },
     'seminar.community.instruction': { en: 'Please join the WhatsApp group to officially enter the community, receive files, and participate in practices (GH₵200 yearly subscription details inside).', fr: 'Veuillez rejoindre le groupe WhatsApp pour intégrer la communauté, recevoir les fichiers et participer aux séances pratiques (détails de l\'abonnement annuel de GH₵200 à l\'intérieur).' },
     'seminar.community.link': { en: 'Join the WhatsApp Group', fr: 'Rejoindre le Groupe WhatsApp' },
+
+    // Consultation
+    'consultation.title': { en: 'Book a Consultation', fr: 'Réserver une Consultation' },
+    'consultation.subtitle': { en: 'Schedule a 1-on-1 session with VASA Consults. Select a date and time that works best for you below.', fr: 'Planifiez une session individuelle avec VASA Consults. Sélectionnez la date et l\'heure qui vous conviennent le mieux ci-dessous.' },
 };
 
 interface LanguageContextType {

@@ -28,8 +28,8 @@ export const Footer: React.FC = () => {
                         </p>
                         
                         <div className="flex flex-col sm:flex-row gap-4 flex-wrap">
-                            <Link to="/contact">
-                                <Button variant="primary" hasArrow className="h-14 px-8 text-lg w-full sm:w-auto break-words">{t('booking.cta.call')}</Button>
+                            <Link to="/consultation">
+                                <Button variant="primary" hasArrow className="h-14 px-8 text-lg w-full sm:w-auto break-words">{t('booking.cta.book')}</Button>
                             </Link>
                             <Link to="/seminar">
                                 <Button variant="outline" hasArrow className="h-14 px-8 text-lg w-full sm:w-auto border-white/20 text-white hover:bg-white hover:text-black transition-colors break-words">{t('booking.cta.join')}</Button>
