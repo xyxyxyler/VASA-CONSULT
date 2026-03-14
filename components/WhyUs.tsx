@@ -28,18 +28,11 @@ export const WhyUs: React.FC = () => {
 
                 <div className="md:w-2/3 flex flex-col gap-8">
                     {[
-                        {
-                            title: t('whyus.reason1.title'),
-                            desc: t('whyus.reason1.desc')
-                        },
-                        {
-                            title: t('whyus.reason2.title'),
-                            desc: t('whyus.reason2.desc')
-                        },
-                        {
-                            title: t('whyus.reason2.title'), // Reusing reason2 pattern or needing reason3
-                            desc: t('whyus.reason2.desc')
-                        }
+                        { title: t('whyus.point1.title'), desc: t('whyus.point1.desc') },
+                        { title: t('whyus.point2.title'), desc: t('whyus.point2.desc') },
+                        { title: t('whyus.point3.title'), desc: t('whyus.point3.desc') },
+                        { title: t('whyus.point4.title'), desc: t('whyus.point4.desc') },
+                        { title: t('whyus.point5.title'), desc: t('whyus.point5.desc') }
                     ].map((item, i) => (
                         <div key={i} className="group p-8 rounded-3xl bg-brand-gray border border-white/5 hover:border-brand-beige/30 transition-colors">
                             <div className="flex items-start justify-between mb-4">

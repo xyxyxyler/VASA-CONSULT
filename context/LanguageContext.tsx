@@ -11,7 +11,7 @@ interface Translations {
 
 const translations: Translations = {
     // Nav
-    'nav.services': { en: 'Our services', fr: 'Nos services' },
+    'nav.services': { en: 'What We Do', fr: 'Ce Que Nous Faisons' },
     'nav.partners': { en: 'Partners', fr: 'Partenaires' },
     'nav.whyUs': { en: 'Why us', fr: 'Pourquoi nous' },
     'nav.reviews': { en: 'Reviews', fr: 'Avis' },
@@ -19,54 +19,78 @@ const translations: Translations = {
     'nav.contact': { en: 'Contact us', fr: 'Contactez-nous' },
 
     // Hero
-    'hero.prefix': { en: 'Excellence in', fr: 'L\'excellence en' },
-    'hero.headline': { en: 'Language Services, Education & Business Support', fr: 'Services Linguistiques, Éducation et Soutien aux Entreprises' },
-    'hero.subtext': { en: 'Plan and host monthly virtual seminars for French learners across Africa and the diaspora.', fr: 'Planifiez et organisez des séminaires virtuels mensuels pour les apprenants de français à travers l\'Afrique et la diaspora.' },
-    'hero.cta.services': { en: 'Our Services', fr: 'Nos Services' },
-    'hero.cta.contact': { en: 'Contact Us', fr: 'Contactez-nous' },
+    'hero.headline.part1': { en: 'Language.', fr: 'Langue.' },
+    'hero.headline.part2': { en: 'Visibility.', fr: 'Visibilité.' },
+    'hero.headline.part3': { en: 'Global Opportunity.', fr: 'Opportunité Mondiale.' },
+    'hero.subtext_new': { en: 'We help multilingual professionals and organizations leverage language skills for career growth, digital visibility, and cross-border collaboration.', fr: 'Nous aidons les professionnels et les organisations multilingues à tirer parti des compétences linguistiques pour la croissance de carrière, la visibilité numérique et la collaboration transfrontalière.' },
+    'hero.cta.book_call': { en: 'Book a Strategy Call', fr: 'Réserver un Appel Stratégique' },
+    'hero.cta.learn_more': { en: 'Learn More', fr: 'En Savoir Plus' },
 
     // BentoGrid / Services
-    'bento.seminars.title': { en: 'Virtual Seminars', fr: 'Séminaires Virtuels' },
-    'bento.seminars.desc': { en: 'Monthly seminars for French learners.', fr: 'Séminaires mensuels pour apprenants.' },
-    'bento.education.title': { en: 'Language Education', fr: 'Éducation Linguistique' },
-    'bento.education.desc': { en: 'Comprehensive French language online education.', fr: 'Formation complète en ligne pour la langue française.' },
-    'bento.business.title': { en: 'Business Support', fr: 'Soutien aux Entreprises' },
-    'bento.business.desc': { en: 'International business support and strategy.', fr: 'Soutien et stratégie pour les affaires internationales.' },
-    'bento.liaison.title': { en: 'Cultural Liaison', fr: 'Liaison Culturelle' },
-    'bento.liaison.desc': { en: 'Bridging cultural gaps through interpretation.', fr: 'Combler les fossés culturels grâce à l\'interprétation.' },
-    'bento.branding.title': { en: 'Personal Branding', fr: 'Image de Marque' },
-    'bento.branding.desc': { en: 'Tailored branding for language professionals.', fr: 'Marque sur mesure pour les professionnels.' },
+    // Services Offerings
+    'service.edu.title': { en: 'French Language Education', fr: 'Éducation en Langue Française' },
+    'service.edu.desc': { en: 'Structured French training for learners, professionals, and organizations from beginner foundations to career-ready communication.', fr: 'Formation structurée en français pour apprenants, professionnels et organisations, des bases pour débutants à la communication prête pour la carrière.' },
+
+    'service.interp.title': { en: 'Interpretation & Translation Services', fr: 'Services d\'Interprétation et de Traduction' },
+    'service.interp.desc': { en: 'Professional French ↔ English interpretation for conferences, business engagements, and institutional contexts.', fr: 'Interprétation professionnelle Français ↔ Anglais pour conférences, engagements commerciaux et contextes institutionnels.' },
+
+    'service.brand.title': { en: 'Visibility & Personal Branding Consulting', fr: 'Consultation en Visibilité et Image de Marque Personnelle' },
+    'service.brand.desc': { en: 'Strategic support on LinkedIn, Instagram, and digital presence to position bilingual professionals for global opportunities.', fr: 'Soutien stratégique sur LinkedIn, Instagram et présence numérique pour positionner les professionnels bilingues vers des opportunités mondiales.' },
+
+    'service.cross.title': { en: 'International & Cross-Border Support', fr: 'Soutien International et Transfrontalier' },
+    'service.cross.desc': { en: 'Advisory services for organizations seeking bilingual talent, cross-market access, or strategic communication bridges.', fr: 'Services de conseil pour les organisations recherchant des talents bilingues, un accès inter-marchés ou des ponts de communication stratégiques.' },
 
     // Services Page
-    'services.title': { en: 'Our Services', fr: 'Nos Services' },
+    'services.title': { en: 'What We Do', fr: 'Ce Que Nous Faisons' },
     'services.subtitle': { en: 'Comprehensive solutions for your global needs.', fr: 'Des solutions complètes pour vos besoins mondiaux.' },
+    'services.intro': { en: 'At VASA Consultancy, we combine language expertise with global strategy to help individuals and organizations communicate effectively across cultures and markets.', fr: 'Chez VASA Consultancy, nous combinons l\'expertise linguistique avec la stratégie globale pour aider les individus et organisations à communiquer efficacement à travers les cultures et les marchés.' },
 
     // Partners (Work)
     'partners.title': { en: 'Partners & Clients', fr: 'Partenaires et Clients' },
     'partners.subtitle': { en: 'Trusted by leading organizations.', fr: 'Recommandé par des organisations de premier plan.' },
 
     // Why Us
-    'whyus.title': { en: 'Why Choose VASA?', fr: 'Pourquoi Choisir VASA ?' },
+    'whyus.title': { en: 'Why VASA Consultancy?', fr: 'Pourquoi VASA Consultancy ?' },
     'whyus.subtitle': { en: 'We bridge the gap between cultures and business.', fr: 'Nous comblons le fossé entre les cultures et les affaires.' },
     'whyus.stat.experience': { en: 'Years Experience', fr: 'Années d\'expérience' },
     'whyus.stat.clients': { en: 'Happy Clients', fr: 'Clients Satisfaits' },
     'whyus.stat.languages': { en: 'Languages', fr: 'Langues' },
-    'whyus.reason1.title': { en: 'Cultural Expertise', fr: 'Expertise Culturelle' },
-    'whyus.reason1.desc': { en: 'Deep understanding of African and diaspora contexts.', fr: 'Compréhension approfondie des contextes africains et de la diaspora.' },
-    'whyus.reason2.title': { en: 'Tailored Solutions', fr: 'Solutions Sur Mesure' },
-    'whyus.reason2.desc': { en: 'Strategies designed specifically for your goals.', fr: 'Des stratégies conçues spécifiquement pour vos objectifs.' },
+    'whyus.point1.title': { en: 'Deep Expertise', fr: 'Expertise Profonde' },
+    'whyus.point1.desc': { en: 'in both language and international business.', fr: 'en langues et en affaires internationales.' },
+    'whyus.point2.title': { en: 'Real-world Experience', fr: 'Expérience Concrète' },
+    'whyus.point2.desc': { en: 'in conferences and institutional engagements.', fr: 'lors de conférences et d\'engagements institutionnels.' },
+    'whyus.point3.title': { en: 'Structured Learning', fr: 'Apprentissage Structuré' },
+    'whyus.point3.desc': { en: '+ visibility strategy for professionals.', fr: '+ stratégie de visibilité pour les professionnels.' },
+    'whyus.point4.title': { en: 'Strategic Positioning', fr: 'Positionnement Stratégique' },
+    'whyus.point4.desc': { en: 'for global opportunities.', fr: 'pour des opportunités mondiales.' },
+    'whyus.point5.title': { en: 'Cultural Fluency', fr: 'Maîtrise Culturelle' },
+    'whyus.point5.desc': { en: 'across Anglophone and Francophone markets.', fr: 'sur les marchés anglophones et francophones.' },
 
     // Reviews
     'reviews.title': { en: 'What our clients say', fr: 'Ce que disent nos clients' },
 
     // About Page
-    'about.title': { en: 'About VASA.', fr: 'À Propos de VASA.' },
+    'about.title': { en: 'About VASA Consultancy.', fr: 'À Propos de VASA Consultancy.' },
     'about.headline': { en: 'Connecting Africa \nand the Diaspora.', fr: 'Connecter l\'Afrique \net la Diaspora.' },
-    'about.description': { en: 'VASA Consultancy is dedicated to bridging cultural and business gaps through language. We provide top-tier language services, online education, interpretation, and international business support to help individuals and organizations thrive in a globalized world.', fr: 'VASA Consultancy se consacre à combler les fossés culturels et commerciaux grâce à la langue. Nous fournissons des services linguistiques de premier plan, une éducation en ligne, de l\'interprétation et un soutien aux entreprises internationales pour aider les individus et les organisations à prospérer dans un monde globalisé.' },
+    'about.description': { en: 'VASA Consultancy is a Ghana-based language education and international business support firm. We empower multilingual professionals to use language not just as a skill, but as a strategic advantage in careers, global networks, and cross-border collaborations. \n\nFounded by Veronica Sasu, VASA bridges communication gaps, builds visibility, and connects talent to opportunities across cultures and markets.', fr: 'VASA Consultancy est une société ghanéenne d\'enseignement des langues et de soutien aux entreprises internationales. Nous permettons aux professionnels multilingues d\'utiliser la langue non seulement comme une compétence, mais comme un avantage stratégique dans leur carrière, leurs réseaux mondiaux et leurs collaborations transfrontalières. \n\nFondée par Veronica Sasu, VASA comble les lacunes de communication, renforce la visibilité et connecte les talents aux opportunités à travers les cultures et les marchés.' },
     'about.mission.title': { en: 'Our Mission', fr: 'Notre Mission' },
     'about.mission.desc': { en: 'To empower businesses and individuals with the linguistic tools and cultural insights needed to succeed across borders.', fr: 'Autonomiser les entreprises et les individus avec les outils linguistiques et les connaissances culturelles nécessaires pour réussir au-delà des frontières.' },
     'about.vision.title': { en: 'Our Vision', fr: 'Notre Vision' },
     'about.vision.desc': { en: 'A connected world where language is no longer a barrier but a bridge to opportunity and growth.', fr: 'Un monde connecté où la langue n\'est plus une barrière mais un pont vers l\'opportunité et la croissance.' },
+
+    // Team (Meet the Founder)
+    'team.label': { en: 'Meet the Founder', fr: 'Rencontrez la Fondatrice' },
+    'team.founder.name': { en: 'Veronica Akua Amoafoah Sasu', fr: 'Veronica Akua Amoafoah Sasu' },
+    'team.founder.role': { en: 'Founder & Principal Consultant', fr: 'Fondatrice et Consultante Principale' },
+    'team.founder.bio': { en: 'Veronica is a multilingual communication and international business professional with over a decade of experience in French language education, cross-cultural engagement, and global positioning. \n\nShe has interpreted at major conferences, supported corporate international engagements, and led language initiatives connecting Ghanaian talent to global opportunities. Currently pursuing an MSc in International Business, Veronica brings both academic strength and real-world impact to her work.', fr: 'Veronica est une professionnelle de la communication multilingue et des affaires internationales avec plus d\'une décennie d\'expérience dans l\'enseignement de la langue française, l\'engagement interculturel et le positionnement global. \n\nElle a interprété lors de grandes conférences, soutenu des engagements internationaux d\'entreprises et dirigé des initiatives linguistiques connectant les talents ghanéens aux opportunités mondiales. Poursuivant actuellement une maîtrise en affaires internationales, Veronica apporte à la fois une force académique et un impact concret à son travail.' },
+
+    // Impact
+    'impact.title': { en: 'Selected Experience & Impact', fr: 'Expérience Sélectionnée et Impact' },
+    'impact.p1': { en: 'Interpreted at the West Africa Education Civil Society Conference (2024)', fr: 'Interprétation lors de la Conférence de la Société Civile sur l\'Éducation en Afrique de l\'Ouest (2024)' },
+    'impact.p2': { en: 'Supported corporate engagement with AIB Ghana (Civil Aviation, 2025)', fr: 'Soutien à l\'engagement d\'entreprise avec AIB Ghana (Aviation Civile, 2025)' },
+    'impact.p3': { en: 'Volunteered at the Ghana–France Educational Conference & Student Fair (2024)', fr: 'Bénévole à la Conférence Éducative et au Salon Étudiant Ghana-France (2024)' },
+    'impact.p4': { en: 'Served as French Teaching Assistant at KNUST', fr: 'A servie en tant qu\'assistante d\'enseignement de français à la KNUST' },
+    'impact.p5': { en: 'Founded Speak French, Shine Online — a community building confidence and visibility for French learners', fr: 'Fondatrice de Speak French, Shine Online — une communauté renforçant la confiance et la visibilité des apprenants de français' },
 
     // Contact Page
     'contact.title': { en: 'Get in touch.', fr: 'Contactez-nous.' },
@@ -124,16 +148,17 @@ const translations: Translations = {
     'values.innovation.title': { en: 'Innovation', fr: 'Innovation' },
     'values.innovation.desc': { en: 'We act as specialized architects, designing creative solutions for complex challenges.', fr: 'Nous agissons comme des architectes spécialisés, concevant des solutions créatives pour des défis complexes.' },
 
-    // Team
-    'team.label': { en: 'Leadership', fr: 'Leadership' },
-    'team.founder.name': { en: 'Veronica Sasu', fr: 'Veronica Sasu' },
-    'team.founder.role': { en: 'Founder & Lead Consultant', fr: 'Fondatrice et Consultante Principale' },
-    'team.founder.bio': { en: 'With a passion for languages and a deep understanding of cross-border dynamics, Veronica founded VASA Consultancy to help individuals and businesses unlock their potential through effective communication and cultural strategy.', fr: 'Passionnée par les langues et possédant une compréhension approfondie des dynamiques transfrontalières, Veronica a fondé VASA Consultancy pour aider les individus et les entreprises à libérer leur potentiel grâce à une communication efficace et une stratégie culturelle.' },
 
-    // Booking
-    'booking.label': { en: 'Schedule a Meeting', fr: 'Planifier une réunion' },
-    'booking.title': { en: 'Book a Consultation', fr: 'Réserver une Consultation' },
-    'booking.desc': { en: 'Select a time that works for you to discuss your language or business needs.', fr: 'Choisissez un moment qui vous convient pour discuter de vos besoins linguistiques ou commerciaux.' },
+    // Booking / CTA Section (Footer)
+    'booking.headline': { en: 'Ready to Leverage \nYour Language?', fr: 'Prêt à Exploiter \nVotre Langue ?' },
+    'booking.desc': { en: 'Whether you’re a multilingual professional ready to build visibility, an organization seeking bilingual talent, or a partner exploring cross-border collaboration — let’s work together.', fr: 'Que vous soyez un professionnel multilingue prêt à accroître sa visibilité, une organisation recherchant des talents bilingues ou un partenaire explorant une collaboration transfrontalière — travaillons ensemble.' },
+    'booking.cta.call': { en: 'Book a Strategy Call', fr: 'Réserver un Appel Stratégique' },
+    'booking.cta.join': { en: 'Join Speak French, Shine Online', fr: 'Rejoignez Parlez Français, Brillez en Ligne' },
+    'booking.cta.contact': { en: 'Contact Us', fr: 'Nous Contacter' },
+
+    // Contact Info Update
+    'contact.info.name': { en: 'Vasa Consultancy Limited', fr: 'Vasa Consultancy Limited' },
+    'contact.info.desc': { en: 'Open to partnerships, consulting engagements, and international collaboration.', fr: 'Ouvert aux partenariats, aux missions de conseil et à la collaboration internationale.' },
 
     // Stats
     'stats.years': { en: 'Years Exp.', fr: 'Années d\'Exp.' },

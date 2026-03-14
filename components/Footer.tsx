@@ -14,21 +14,36 @@ export const Footer: React.FC = () => {
                     <div>
                         <div className="flex items-center gap-2 mb-8">
                             <img
-                                src="/images/logo-dark-mode.png"
+                                src="/images/vasa-logo.svg"
                                 alt="VASA Consultancy"
-                                className="h-12 w-auto object-contain"
+                                className="h-10 md:h-12 w-auto object-contain"
                             />
                         </div>
-                        <h2 className="text-5xl md:text-7xl font-medium tracking-tight text-white mb-8">
-                            {t('footer.ready').split('\n')[0]} <br />
-                            <span className="text-gray-500">{t('footer.ready').split('\n')[1]}</span>
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-white mb-6">
+                            {t('booking.headline').split('\n')[0]} <br />
+                            <span className="text-gray-500">{t('booking.headline').split('\n')[1]}</span>
                         </h2>
-                        <Link to="/contact">
-                            <Button variant="primary" hasArrow className="h-14 px-8 text-lg">{t('nav.contact')}</Button>
-                        </Link>
-                        <div className="mt-8 text-gray-400 space-y-2">
-                            <p>Tel: 0543409270</p>
-                            <p>Email: vasaconsults@gmail.com</p>
+                        <p className="text-gray-400 text-lg leading-relaxed max-w-xl mb-8">
+                            {t('booking.desc')}
+                        </p>
+                        
+                        <div className="flex flex-col sm:flex-row gap-4 flex-wrap">
+                            <Link to="/contact">
+                                <Button variant="primary" hasArrow className="h-14 px-8 text-lg w-full sm:w-auto break-words">{t('booking.cta.call')}</Button>
+                            </Link>
+                            <a href="https://www.instagram.com/vasaconsults?igsh=MTk5ZGdhZGM5cGdmOQ%3D%3D&utm_source=qr" target="_blank" rel="noreferrer">
+                                <Button variant="outline" hasArrow className="h-14 px-8 text-lg w-full sm:w-auto border-white/20 text-white hover:bg-white hover:text-black transition-colors break-words">{t('booking.cta.join')}</Button>
+                            </a>
+                            <Link to="/contact">
+                                <Button variant="outline" hasArrow className="h-14 px-8 text-lg w-full sm:w-auto border-white/20 text-white hover:bg-white hover:text-black transition-colors break-words">{t('booking.cta.contact')}</Button>
+                            </Link>
+                        </div>
+
+                        <div className="mt-12 text-gray-400 space-y-2 text-sm leading-relaxed max-w-md">
+                            <p className="font-medium text-white text-base">{t('contact.info.name')}</p>
+                            <p>Accra, Ghana</p>
+                            <p className="mt-4 pt-4 border-t border-white/10">Email: vasaconsults@gmail.com</p>
+                            <p className="pt-2">{t('contact.info.desc')}</p>
                         </div>
                     </div>
 
@@ -47,7 +62,7 @@ export const Footer: React.FC = () => {
                                 <h4 className="text-white font-medium mb-4">{t('footer.socials')}</h4>
                                 <ul className="space-y-2 text-gray-500 text-sm">
                                     <li><a href="https://www.linkedin.com/company/vasa-consults" target="_blank" rel="noreferrer" className="hover:text-brand-beige transition-colors">LinkedIn</a></li>
-                                    <li><a href="https://www.instagram.com/vasaconsults" target="_blank" rel="noreferrer" className="hover:text-brand-beige transition-colors">Instagram</a></li>
+                                    <li><a href="https://www.instagram.com/vasaconsults?igsh=MTk5ZGdhZGM5cGdmOQ%3D%3D&utm_source=qr" target="_blank" rel="noreferrer" className="hover:text-brand-beige transition-colors">Instagram</a></li>
                                 </ul>
                             </div>
                             <div>

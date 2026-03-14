@@ -20,17 +20,28 @@ export const Team: React.FC = () => {
                 </div>
                 <div className="md:col-span-7 lg:col-span-8 order-1 md:order-2">
                     <span className="text-brand-beige font-medium tracking-wider uppercase text-sm mb-4 block">{t('team.label')}</span>
-                    <h2 className="text-4xl md:text-5xl font-medium text-white mb-8">{t('team.founder.name')}</h2>
-                    <h3 className="text-xl text-gray-300 mb-6 font-medium">{t('team.founder.role')}</h3>
-                    <p className="text-gray-400 text-lg leading-relaxed mb-8 max-w-2xl">
+                    <h2 className="text-4xl md:text-5xl font-medium text-white mb-2">{t('team.founder.name')}</h2>
+                    <h3 className="text-xl text-brand-beige mb-6 font-medium">{t('team.founder.role')}</h3>
+                    <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-2xl whitespace-pre-line">
                         {t('team.founder.bio')}
                     </p>
 
+                    <div className="mb-10">
+                        <h4 className="text-white text-xl font-medium mb-4">{t('impact.title')}</h4>
+                        <ul className="text-gray-400 space-y-3 leading-relaxed">
+                            <li className="flex gap-3 items-start"><span className="text-brand-beige mt-1">•</span>{t('impact.p1')}</li>
+                            <li className="flex gap-3 items-start"><span className="text-brand-beige mt-1">•</span>{t('impact.p2')}</li>
+                            <li className="flex gap-3 items-start"><span className="text-brand-beige mt-1">•</span>{t('impact.p3')}</li>
+                            <li className="flex gap-3 items-start"><span className="text-brand-beige mt-1">•</span>{t('impact.p4')}</li>
+                            <li className="flex gap-3 items-start"><span className="text-brand-beige mt-1">•</span>{t('impact.p5')}</li>
+                        </ul>
+                    </div>
+
                     <div className="flex gap-4">
-                        <a href="https://www.linkedin.com/company/vasa-consults" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all">
+                        <a href="https://www.linkedin.com/company/vasa-consults" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-brand-beige hover:border-brand-beige hover:text-black transition-all">
                             <Linkedin className="w-5 h-5" />
                         </a>
-                        <a href="mailto:vasaconsults@gmail.com" className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all">
+                        <a href="mailto:vasaconsults@gmail.com" className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-brand-beige hover:border-brand-beige hover:text-black transition-all">
                             <Mail className="w-5 h-5" />
                         </a>
                     </div>

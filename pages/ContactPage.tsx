@@ -41,11 +41,11 @@ export const ContactPage: React.FC = () => {
                     <div className="space-y-8 text-gray-300">
                         <div className="flex items-start gap-4">
                             <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center shrink-0">
-                                <Phone className="w-5 h-5 text-brand-beige" />
+                                <MapPin className="w-5 h-5 text-brand-beige" />
                             </div>
                             <div>
-                                <h3 className="text-white font-medium mb-1">Phone</h3>
-                                <p>0543409270</p>
+                                <h3 className="text-white font-medium mb-1">{t('contact.info.name')}</h3>
+                                <p>Accra, Ghana</p>
                             </div>
                         </div>
 
@@ -59,24 +59,18 @@ export const ContactPage: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="flex items-start gap-4">
-                            <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center shrink-0">
-                                <MapPin className="w-5 h-5 text-brand-beige" />
-                            </div>
-                            <div>
-                                <h3 className="text-white font-medium mb-1">Office</h3>
-                                <p>Accra, Ghana</p>
-                            </div>
+                        <div className="pt-4 mt-4 text-gray-400 leading-relaxed max-w-sm">
+                            <p>{t('contact.info.desc')}</p>
                         </div>
                     </div>
 
                     <div className="mt-12 pt-12 border-t border-white/10">
-                        <h3 className="text-white font-medium mb-6">Follow us</h3>
+                        <h3 className="text-white font-medium mb-6">Connect with us</h3>
                         <div className="flex gap-4">
-                            <a href="https://www.linkedin.com/company/vasa-consults" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-brand-beige hover:border-brand-beige hover:text-black transition-all">
+                            <a href="https://www.linkedin.com/company/vasaconsultancy/" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-brand-beige hover:border-brand-beige hover:text-black transition-all">
                                 <Linkedin className="w-5 h-5" />
                             </a>
-                            <a href="https://www.instagram.com/vasaconsults" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-brand-beige hover:border-brand-beige hover:text-black transition-all">
+                            <a href="https://www.instagram.com/vasaconsults?igsh=MTk5ZGdhZGM5cGdmOQ%3D%3D&utm_source=qr" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-brand-beige hover:border-brand-beige hover:text-black transition-all">
                                 <Instagram className="w-5 h-5" />
                             </a>
                         </div>

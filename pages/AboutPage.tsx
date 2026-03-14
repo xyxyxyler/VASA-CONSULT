@@ -18,7 +18,7 @@ export const AboutPage: React.FC = () => {
                     {t('about.headline').split('\n')[0]} <br />
                     <span className="text-gray-500">{t('about.headline').split('\n')[1]}</span>
                 </h1>
-                <p className="text-gray-300 text-lg leading-relaxed max-w-2xl mb-12">
+                <p className="text-gray-300 text-lg leading-relaxed max-w-2xl mb-12 whitespace-pre-line">
                     {t('about.description')}
                 </p>
 

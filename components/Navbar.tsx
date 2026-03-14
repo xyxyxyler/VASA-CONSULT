@@ -40,13 +40,13 @@ export const Navbar: React.FC = () => {
                 <div className="z-50">
                     <Link to="/">
                         <img
-                            src={isScrolled ? "/images/logo-light-mode.png" : "/images/logo-dark-mode.png"}
+                            src="/images/vasa-logo.svg"
                             alt="VASA Consultancy"
                             className={`h-10 md:h-12 w-auto object-contain transition-all duration-300 ${isMenuOpen ? "opacity-0" : "opacity-100"}`}
                         />
                         {/* Mobile Menu Logo (Always Dark/White for Contrast on Black Overlay) */}
                         <img
-                            src="/images/logo-dark-mode.png"
+                            src="/images/vasa-logo.svg"
                             alt="VASA Consultancy"
                             className={`absolute top-0 left-0 h-10 md:h-12 w-auto object-contain transition-all duration-300 ${isMenuOpen ? "opacity-100" : "opacity-0"}`}
                         />
