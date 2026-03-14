@@ -9,12 +9,11 @@ export const Team: React.FC = () => {
         <section className="py-24 px-6 md:px-12 max-w-8xl mx-auto bg-white/5 rounded-[2.5rem] my-12 mx-2 md:mx-6">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
                 <div className="md:col-span-5 lg:col-span-4 order-2 md:order-1">
-                    <div className="relative aspect-[3/4] rounded-3xl overflow-hidden bg-gray-800">
-                        {/* Placeholder for Founder Image */}
+                    <div className="relative aspect-[3/4] rounded-3xl overflow-hidden bg-[#1a1a1a] shadow-2xl shadow-black/50 border border-white/5">
                         <img
-                            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Founder"
-                            className="w-full h-full object-cover"
+                            src="/images/founder.jpg"
+                            alt="Veronica - Founder of VASA Consults"
+                            className="w-full h-full object-cover scale-105 hover:scale-100 transition-transform duration-700"
                         />
                     </div>
                 </div>
