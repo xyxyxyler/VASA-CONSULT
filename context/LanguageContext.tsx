@@ -14,9 +14,10 @@ const translations: Translations = {
     'nav.services': { en: 'What We Do', fr: 'Ce Que Nous Faisons' },
     'nav.partners': { en: 'Partners', fr: 'Partenaires' },
     'nav.whyUs': { en: 'Why us', fr: 'Pourquoi nous' },
-    'nav.reviews': { en: 'Reviews', fr: 'Avis' },
+    'nav.reviews': { en: 'Testimonials', fr: 'Témoignages' },
     'nav.about': { en: 'About', fr: 'À propos' },
     'nav.contact': { en: 'Contact us', fr: 'Contactez-nous' },
+    'nav.enroll': { en: 'Enroll Now', fr: "S'inscrire" },
 
     // Hero
     'hero.headline.part1': { en: 'Language.', fr: 'Langue.' },
@@ -66,8 +67,8 @@ const translations: Translations = {
     'whyus.point5.title': { en: 'Cultural Fluency', fr: 'Maîtrise Culturelle' },
     'whyus.point5.desc': { en: 'across Anglophone and Francophone markets.', fr: 'sur les marchés anglophones et francophones.' },
 
-    // Reviews
-    'reviews.title': { en: 'What our clients say', fr: 'Ce que disent nos clients' },
+    // Reviews / Testimonials
+    'reviews.title': { en: 'What People Say', fr: 'Ce que disent les gens' },
 
     // About Page
     'about.title': { en: 'About VASA Consultancy.', fr: 'À Propos de VASA Consultancy.' },
@@ -198,12 +199,31 @@ const translations: Translations = {
 
     'bento.expertise.title': { en: 'Core Expertise', fr: 'Expertise Principale' },
     'bento.expertise.edu': { en: 'Language Education', fr: 'Éducation Linguistique' },
-    'bento.expertise.biz': { en: 'Business Support', fr: 'Soutien aux Entreprises' },
-    'bento.expertise.liaison': { en: 'Cultural Liaison', fr: 'Liaison Culturelle' },
+    'bento.expertise.biz': { en: 'Interpretation & Translation', fr: 'Interprétation et Traduction' },
+    'bento.expertise.liaison': { en: 'Visibility Consulting', fr: 'Consultation en Visibilité' },
 
-    'bento.expertise.legal': { en: 'Legal Translation', fr: 'Traduction Juridique' },
-    'bento.expertise.medical': { en: 'Medical Interpretation', fr: 'Interprétation Médicale' },
+    'bento.expertise.legal': { en: 'Cross-Border Support', fr: 'Soutien Transfrontalier' },
+    'bento.expertise.medical': { en: 'Cultural Liaison', fr: 'Liaison Culturelle' },
     'bento.expertise.recruit': { en: 'Bilingual Recruitment', fr: 'Recrutement Bilingue' },
+
+    // Enrollment
+    'enroll.title': { en: 'Register for French Class', fr: 'Inscrivez-vous aux Cours de Français' },
+    'enroll.subtitle': { en: 'Join VASA Online French Class. Our goal is to enable you to speak fluently and confidently.', fr: 'Rejoignez les cours de français en ligne de VASA. Notre objectif est de vous permettre de parler couramment et avec confiance.' },
+    'enroll.step1.title': { en: 'Personal Information', fr: 'Informations Personnelles' },
+    'enroll.step2.title': { en: 'Current French Profile', fr: 'Profil de Français Actuel' },
+    'enroll.step3.title': { en: 'Goals & Motivation', fr: 'Objectifs et Motivation' },
+    'enroll.step4.title': { en: 'Package & Schedule', fr: 'Forfait et Horaires' },
+    'enroll.step5.title': { en: 'Payment & Administration', fr: 'Paiement et Administration' },
+    'enroll.btn.next': { en: 'Next Step', fr: 'Étape Suivante' },
+    'enroll.btn.back': { en: 'Back', fr: 'Retour' },
+    'enroll.btn.complete': { en: 'Complete Registration', fr: 'Terminer l\'inscription' },
+    'enroll.btn.submitting': { en: 'Submitting...', fr: 'Soumission en cours...' },
+    'enroll.success.title': { en: 'Registration Received!', fr: 'Inscription Reçue !' },
+    'enroll.success.btn': { en: 'Return to Home', fr: 'Retour à l\'Accueil' },
+    'enroll.labels.name': { en: 'Full Name *', fr: 'Nom Complet *' },
+    'enroll.labels.email': { en: 'Email Address *', fr: 'Adresse Email *' },
+    'enroll.labels.whatsapp': { en: 'WhatsApp Number *', fr: 'Numéro WhatsApp *' },
+    'enroll.labels.country': { en: 'Country & Timezone *', fr: 'Pays et Fuseau Horaire *' },
 };
 
 interface LanguageContextType {

@@ -5,22 +5,29 @@ export const Reviews: React.FC = () => {
     const { t } = useLanguage();
     const reviews = [
         {
-            quote: "VASA's seminars gave me the confidence to speak French fluently in my business negotiation. Highly recommended!",
-            author: "Kwame A.",
-            role: "Entrepreneur",
-            image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+            quote: "I enjoy my French classes with Veronica because she is patient yet challenges me in a way that encourages me to do more. She provides very helpful learning material, does not overwhelm me with too much information at once and generally tutors with my needs in mind. I Definitely recommend her 1:1 tutoring classes.",
+            author: "Dr Priscilla",
+            role: "Client"
         },
         {
-            quote: "We found the perfect bilingual candidate for our team thanks to their recruitment support.",
-            author: "Sarah J.",
-            role: "HR Manager",
-            image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+            quote: "As a French tutor, interpreter, and translator, Veronica consistently demonstrates a deep command of the language and a unique ability to make it engaging and accessible-whether in the classroom or through her content as a French language influencer. She brings creativity, clarity, and cultural sensitivity to everything she does, which makes her an asset in both educational and professional settings.",
+            author: "Colleague",
+            role: ""
         },
         {
-            quote: "The interpretation services at our regional conference were flawless. Cultural nuance was spot on.",
-            author: "Dr. K. Osei",
-            role: "Conference Organizer",
-            image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+            quote: "Her commitment to helping others learn and love the French language is truly inspiring. I highly recommend Veronica to any institution, brand, or individual looking for a skilled and reliable language expert.",
+            author: "Founder of Benash Afrique",
+            role: "Partner"
+        },
+        {
+            quote: "Your hard work, professionalism, motivation and positive attitude played a fundamental role in the success of our event, and we are delighted. Thanks to your dedication, we were able to achieve are markable team effort in presenting Ghanaian students with the advantages of studying in France.",
+            author: "Campus France Ghana",
+            role: "Organization"
+        },
+        {
+            quote: "Ms. Veronica's proficiency in French interpretation was invaluable throughout the task. She accompanied the delegation, which included myself as the Commissioner and other senior staff members, providing real-time translation and interpretation services during high-level meetings, presentations, and formal signing ceremonies. Her professionalism, fluency, and cultural awareness substantially contributed to the smooth progression of discussions and mutual understanding among all parties involved. Thanks in considerable part to her contributions, the objectives of the mission were successfully achieved, culminating in the MoU being signed without any communication barriers.",
+            author: "Akwasi Prempeh",
+            role: "Former Commissioner, AIB"
         }
     ];
 
@@ -38,10 +45,9 @@ export const Reviews: React.FC = () => {
                             <p className="text-gray-300 leading-relaxed">"{review.quote}"</p>
                         </div>
                         <div className="flex items-center gap-4">
-                            <img src={review.image} alt={review.author} className="w-10 h-10 rounded-full object-cover" />
                             <div>
-                                <h4 className="text-white font-medium text-sm">{review.author}</h4>
-                                <p className="text-xs text-gray-500">{review.role}</p>
+                                <h4 className="text-white font-medium text-lg">{review.author}</h4>
+                                {review.role && <p className="text-sm text-brand-beige mt-1">{review.role}</p>}
                             </div>
                         </div>
                     </div>

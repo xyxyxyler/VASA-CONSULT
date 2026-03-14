@@ -90,8 +90,8 @@ export const Navbar: React.FC = () => {
                         </button>
                     </div>
 
-                    <Link to="/contact">
-                        <Button variant={isScrolled ? "primary" : "white"} hasArrow>{t('nav.contact')}</Button>
+                    <Link to="/enroll">
+                        <Button variant={isScrolled ? "primary" : "white"} hasArrow>{t('nav.enroll')}</Button>
                     </Link>
                 </div>
 
@@ -133,8 +133,8 @@ export const Navbar: React.FC = () => {
                             {link.label}
                         </Link>
                     ))}
-                    <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-                        <Button variant="white" hasArrow className="mt-8">{t('nav.contact')}</Button>
+                    <Link to="/enroll" onClick={() => setIsMenuOpen(false)}>
+                        <Button variant="white" hasArrow className="mt-8">{t('nav.enroll')}</Button>
                     </Link>
                 </div>
             )}

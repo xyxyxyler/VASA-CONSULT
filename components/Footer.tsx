@@ -31,9 +31,9 @@ export const Footer: React.FC = () => {
                             <Link to="/contact">
                                 <Button variant="primary" hasArrow className="h-14 px-8 text-lg w-full sm:w-auto break-words">{t('booking.cta.call')}</Button>
                             </Link>
-                            <a href="https://www.instagram.com/vasaconsults?igsh=MTk5ZGdhZGM5cGdmOQ%3D%3D&utm_source=qr" target="_blank" rel="noreferrer">
+                            <Link to="/enroll">
                                 <Button variant="outline" hasArrow className="h-14 px-8 text-lg w-full sm:w-auto border-white/20 text-white hover:bg-white hover:text-black transition-colors break-words">{t('booking.cta.join')}</Button>
-                            </a>
+                            </Link>
                             <Link to="/contact">
                                 <Button variant="outline" hasArrow className="h-14 px-8 text-lg w-full sm:w-auto border-white/20 text-white hover:bg-white hover:text-black transition-colors break-words">{t('booking.cta.contact')}</Button>
                             </Link>
@@ -60,10 +60,14 @@ export const Footer: React.FC = () => {
                             </div>
                             <div>
                                 <h4 className="text-white font-medium mb-4">{t('footer.socials')}</h4>
-                                <ul className="space-y-2 text-gray-500 text-sm">
-                                    <li><a href="https://www.linkedin.com/company/vasa-consults" target="_blank" rel="noreferrer" className="hover:text-brand-beige transition-colors">LinkedIn</a></li>
-                                    <li><a href="https://www.instagram.com/vasaconsults?igsh=MTk5ZGdhZGM5cGdmOQ%3D%3D&utm_source=qr" target="_blank" rel="noreferrer" className="hover:text-brand-beige transition-colors">Instagram</a></li>
-                                </ul>
+                                <div className="flex gap-4">
+                                    <a href="https://www.linkedin.com/company/vasaconsultancy/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-brand-beige hover:border-brand-beige hover:text-black transition-all">
+                                        <Linkedin className="w-4 h-4" />
+                                    </a>
+                                    <a href="https://www.instagram.com/vasaconsults?igsh=MTk5ZGdhZGM5cGdmOQ%3D%3D&utm_source=qr" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-brand-beige hover:border-brand-beige hover:text-black transition-all">
+                                        <Instagram className="w-4 h-4" />
+                                    </a>
+                                </div>
                             </div>
                             <div>
                                 <h4 className="text-white font-medium mb-4">{t('footer.legal')}</h4>

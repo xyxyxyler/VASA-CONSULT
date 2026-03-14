@@ -37,7 +37,7 @@ export const Services: React.FC = () => {
                                 <h3 className="text-xl font-medium text-black mb-2">{t('service.edu.title')}</h3>
                                 <p className="text-sm text-gray-600">{t('service.edu.desc')}</p>
                             </div>
-                            <Link to="/contact" className="mt-4 pt-4 border-t border-black/10 flex justify-between items-center group cursor-pointer hover:opacity-80 transition-opacity">
+                            <Link to="/enroll" className="mt-4 pt-4 border-t border-black/10 flex justify-between items-center group cursor-pointer hover:opacity-80 transition-opacity">
                                 <span className="text-xs text-black font-medium">Start learning</span>
                                 <ArrowUpRight className="w-4 h-4 text-black transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                             </Link>
