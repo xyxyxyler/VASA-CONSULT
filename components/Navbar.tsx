@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Asterisk, Menu, X } from 'lucide-react';
+import { Asterisk, Menu, X, Headset } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from './Button';
 import { useLanguage } from '../context/LanguageContext';
@@ -90,9 +90,18 @@ export const Navbar: React.FC = () => {
                         </button>
                     </div>
 
-                    <Link to="/enroll">
-                        <Button variant={isScrolled ? "primary" : "white"} hasArrow>{t('nav.enroll')}</Button>
-                    </Link>
+                    <div className="flex items-center gap-3">
+                        <Link 
+                            to="/contact" 
+                            className={`p-2 rounded-full transition-colors flex items-center justify-center ${isScrolled ? "text-gray-500 hover:bg-black/5 hover:text-black" : "text-gray-300 hover:bg-white/10 hover:text-white"}`} 
+                            title={t('booking.cta.contact')}
+                        >
+                            <Headset className="w-5 h-5" />
+                        </Link>
+                        <Link to="/enroll">
+                            <Button variant={isScrolled ? "primary" : "white"} hasArrow>{t('nav.enroll')}</Button>
+                        </Link>
+                    </div>
                 </div>
 
                 {/* Mobile Menu Toggle */}
@@ -133,9 +142,14 @@ export const Navbar: React.FC = () => {
                             {link.label}
                         </Link>
                     ))}
-                    <Link to="/enroll" onClick={() => setIsMenuOpen(false)}>
-                        <Button variant="white" hasArrow className="mt-8">{t('nav.enroll')}</Button>
-                    </Link>
+                    <div className="flex items-center gap-4 mt-8">
+                        <Link to="/contact" onClick={() => setIsMenuOpen(false)} className="p-3 bg-white/10 rounded-full text-white hover:bg-brand-beige transition-colors shadow-sm">
+                            <Headset className="w-6 h-6" />
+                        </Link>
+                        <Link to="/enroll" onClick={() => setIsMenuOpen(false)}>
+                            <Button variant="white" hasArrow>{t('nav.enroll')}</Button>
+                        </Link>
+                    </div>
                 </div>
             )}
         </nav>
