@@ -31,7 +31,7 @@ export const Footer: React.FC = () => {
                             <Link to="/contact">
                                 <Button variant="primary" hasArrow className="h-14 px-8 text-lg w-full sm:w-auto break-words">{t('booking.cta.call')}</Button>
                             </Link>
-                            <Link to="/enroll">
+                            <Link to="/seminar">
                                 <Button variant="outline" hasArrow className="h-14 px-8 text-lg w-full sm:w-auto border-white/20 text-white hover:bg-white hover:text-black transition-colors break-words">{t('booking.cta.join')}</Button>
                             </Link>
                             <Link to="/contact">
