@@ -34,24 +34,6 @@ export const SeminarRegistrationForm: React.FC = () => {
         setIsSubmitting(true);
         setSubmitStatus('idle');
 
-        // Prepare email content
-        const emailContent = `
-            <h2>New Seminar Registration</h2>
-            
-            <h3>1. Profile & Status</h3>
-            <p><b>Email:</b> ${formData.email}</p>
-            <p><b>Follows VASA (LinkedIn/Insta):</b> ${formData.followStatus}</p>
-            <p><b>Previously Filled Form:</b> ${formData.previouslyFilled}</p>
-            <p><b>User Type:</b> ${formData.userType === 'Other' ? formData.userTypeOther : formData.userType}</p>
-            <p><b>Studying French For:</b> ${formData.studyDuration}</p>
-            
-            <h3>2. Goals & Community</h3>
-            <p><b>Goals for Seminar:</b> ${formData.goals}</p>
-            <p><b>Contact for upcoming seminars:</b> ${formData.upcomingContact}</p>
-            <p><b>Wants to join GH₵200 Community:</b> ${formData.joinCommunity ? 'Yes' : 'No'}</p>
-            <p><b>Referral Source:</b> ${formData.source === 'Other' ? formData.sourceOther : formData.source}</p>
-        `;
-
         try {
             const response = await fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
@@ -64,7 +46,15 @@ export const SeminarRegistrationForm: React.FC = () => {
                     subject: `New Seminar Registration: ${formData.email}`,
                     from_name: 'VASA Seminar Form',
                     to_email: 'vasaconsults@gmail.com',
-                    message: emailContent,
+                    'Email Address': formData.email,
+                    'Follows VASA on Socials': formData.followStatus,
+                    'Previously Registered': formData.previouslyFilled,
+                    'User Category': formData.userType === 'Other' ? formData.userTypeOther : formData.userType,
+                    'Studying French For': formData.studyDuration,
+                    'Seminar Goals': formData.goals,
+                    'Contact For Upcoming Seminars': formData.upcomingContact,
+                    'Wants Community Access (GH₵200)': formData.joinCommunity ? 'Yes' : 'No',
+                    'Discovered Via': formData.source === 'Other' ? formData.sourceOther : formData.source,
                 })
             });
 

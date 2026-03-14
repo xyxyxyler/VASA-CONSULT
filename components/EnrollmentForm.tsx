@@ -124,44 +124,6 @@ export const EnrollmentForm: React.FC = () => {
         setIsSubmitting(true);
         setSubmitStatus('idle');
 
-        // Prepare email content formatting
-        const emailContent = `
-            <h2>New French Class Registration</h2>
-            
-            <h3>1. Personal Information</h3>
-            <p><b>Name:</b> ${formData.name}</p>
-            <p><b>Email:</b> ${formData.email}</p>
-            <p><b>WhatsApp:</b> ${formData.whatsapp}</p>
-            <p><b>Country/Timezone:</b> ${formData.countryTimezone}</p>
-            
-            <h3>2. French Profile</h3>
-            <p><b>Current Level:</b> ${formData.currentLevel}</p>
-            <p><b>Study Duration:</b> ${formData.studyDuration}</p>
-            <p><b>Exams:</b> ${formData.exams}</p>
-            <p><b>Biggest Challenge:</b> ${formData.challenge}</p>
-            <p><b>Attended Seminar:</b> ${formData.attendedSeminar}</p>
-            <p><b>Discovered via:</b> ${formData.discoverySource}</p>
-            <p><b>Past VASA Student:</b> ${formData.pastVasaStudent}</p>
-
-            <h3>3. Goals & Motivation</h3>
-            <p><b>Top Goals:</b> ${formData.goals.join(', ')}</p>
-            <p><b>Success Definition:</b> ${formData.successDefinition}</p>
-            <p><b>Learning Style:</b> ${formData.learningStyle}</p>
-
-            <h3>4. Package & Schedule</h3>
-            <p><b>Class Format:</b> ${formData.classFormat}</p>
-            <p><b>Frequency:</b> ${formData.frequency}</p>
-            <p><b>Agreed to Resource Policy:</b> ${formData.agreedToResources ? 'Yes' : 'No'}</p>
-            <p><b>Start Date:</b> ${formData.startDate}</p>
-            <p><b>Availabilities:</b> ${formData.availabilities.join(', ')}</p>
-            <p><b>Notes/Questions:</b> ${formData.additionalNotes}</p>
-
-            <h3>5. Payment Details</h3>
-            <p><b>Payment Method:</b> ${formData.paymentMethod}</p>
-            <p><b>Agreed to 50% Deposit:</b> ${formData.agreedToDeposit ? 'Yes' : 'No'}</p>
-            <p><b>Agreed to Cancellation Policy:</b> ${formData.agreedToCancellationPolicy ? 'Yes' : 'No'}</p>
-        `;
-
         try {
             // Web3Forms API Call
             // Note: Users will need to replace 'YOUR_ACCESS_KEY_HERE' with their actual key from web3forms.com
@@ -176,7 +138,29 @@ export const EnrollmentForm: React.FC = () => {
                     subject: `New Class Registration from ${formData.name}`,
                     from_name: 'VASA Website Enrollment',
                     to_email: 'vasaconsults@gmail.com',
-                    message: emailContent,
+                    'Full Name': formData.name,
+                    'Email Address': formData.email,
+                    'WhatsApp Number': formData.whatsapp,
+                    'Country & Timezone': formData.countryTimezone,
+                    'Current French Level': formData.currentLevel,
+                    'How long studying?': formData.studyDuration,
+                    'Exams Taken': formData.exams,
+                    'Biggest Challenge': formData.challenge,
+                    'Attended Seminar Before': formData.attendedSeminar,
+                    'Discovered VASA via': formData.discoverySource,
+                    'Past VASA Student': formData.pastVasaStudent,
+                    'Top Goals': formData.goals.join(', '),
+                    'Definition of Success': formData.successDefinition,
+                    'Learning Style preference': formData.learningStyle,
+                    'Class Format': formData.classFormat,
+                    'Frequency': formData.frequency,
+                    'Agreed to Resource Policy': formData.agreedToResources ? 'Yes' : 'No',
+                    'Start Date': formData.startDate,
+                    'Availabilities': formData.availabilities.join(', '),
+                    'Notes/Questions': formData.additionalNotes,
+                    'Payment Method': formData.paymentMethod,
+                    'Agreed to 50% Deposit': formData.agreedToDeposit ? 'Yes' : 'No',
+                    'Agreed to Cancellation Policy': formData.agreedToCancellationPolicy ? 'Yes' : 'No',
                 })
             });
 
