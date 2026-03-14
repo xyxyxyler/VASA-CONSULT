@@ -26,30 +26,30 @@ export const FAQ: React.FC = () => {
     ];
 
     return (
-        <section className="py-24 px-6 md:px-12 max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-medium text-white mb-16 text-center">{t('faq.title')}</h2>
+        <section className="py-16 px-6 md:px-12 max-w-4xl mx-auto border-t border-white/5">
+            <h2 className="text-sm uppercase tracking-widest text-brand-beige mb-8 text-center font-medium">{t('faq.title')}</h2>
 
-            <div className="space-y-4">
+            <div className="space-y-2">
                 {faqs.map((faq, i) => (
                     <div
                         key={i}
-                        className={`rounded-2xl overflow-hidden border transition-all duration-300 ${openIndex === i ? 'bg-white/5 border-brand-beige/30' : 'bg-transparent border-white/10 hover:border-white/20'}`}
+                        className={`overflow-hidden transition-all duration-300 border-b border-white/10 ${openIndex === i ? 'pb-2 bg-transparent' : 'bg-transparent'}`}
                     >
                         <button
-                            className="w-full flex items-center justify-between p-6 md:p-8 text-left"
+                            className="w-full flex items-center justify-between py-4 text-left group"
                             onClick={() => setOpenIndex(openIndex === i ? null : i)}
                         >
-                            <span className={`text-lg md:text-xl font-medium transition-colors ${openIndex === i ? 'text-white' : 'text-gray-300'}`}>
+                            <span className={`text-base md:text-lg font-medium transition-colors ${openIndex === i ? 'text-brand-beige' : 'text-gray-300 group-hover:text-white'}`}>
                                 {faq.q}
                             </span>
-                            <span className={`flex-shrink-0 ml-4 w-8 h-8 rounded-full flex items-center justify-center border transition-all ${openIndex === i ? 'bg-brand-beige text-black border-brand-beige' : 'border-white/20 text-white'}`}>
+                            <span className={`flex-shrink-0 ml-4 w-6 h-6 flex items-center justify-center transition-all ${openIndex === i ? 'text-brand-beige' : 'text-gray-500 group-hover:text-white'}`}>
                                 {openIndex === i ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                             </span>
                         </button>
 
-                        <div className={`grid transition-[grid-template-rows] duration-300 ease-out ${openIndex === i ? 'grid-rows-[1fr] pb-6 md:pb-8 px-6 md:px-8' : 'grid-rows-[0fr]'}`}>
+                        <div className={`grid transition-[grid-template-rows] duration-300 ease-out ${openIndex === i ? 'grid-rows-[1fr] pb-4' : 'grid-rows-[0fr]'}`}>
                             <div className="overflow-hidden">
-                                <p className="text-gray-400 leading-relaxed">
+                                <p className="text-gray-400 text-sm leading-relaxed pr-8">
                                     {faq.a}
                                 </p>
                             </div>
