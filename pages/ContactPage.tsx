@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Asterisk, Mail, Phone, MapPin, Send, Linkedin, Instagram } from 'lucide-react';
+import { Asterisk, Mail, Phone, MapPin, Send, Linkedin, Instagram, Loader2, Check } from 'lucide-react';
 import { Button } from '../components/Button';
 import { useLanguage } from '../context/LanguageContext';
 import { BookingSection } from '../components/BookingSection';
@@ -12,12 +12,44 @@ export const ContactPage: React.FC = () => {
         message: ''
     });
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // Handle form submission logic here (e.g., API call)
-        console.log('Form submitted:', formData);
-        alert('Thank you for your message! We will get back to you soon.');
-        setFormData({ name: '', email: '', message: '' });
+        setIsSubmitting(true);
+        setSubmitStatus('idle');
+
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    access_key: 'cfe4365b-8973-406f-9549-6d2457585c96', // Web3Forms Key
+                    subject: `New Contact Message from ${formData.name}`,
+                    from_name: 'VASA Website Contact Form',
+                    to_email: 'vasaconsults@gmail.com',
+                    'Name': formData.name,
+                    'Email Address': formData.email,
+                    'Message': formData.message,
+                })
+            });
+
+            const result = await response.json();
+            if (result.success) {
+                setSubmitStatus('success');
+                setFormData({ name: '', email: '', message: '' });
+            } else {
+                setSubmitStatus('error');
+            }
+        } catch (error) {
+            setSubmitStatus('error');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -81,6 +113,17 @@ export const ContactPage: React.FC = () => {
                 <div className="flex-1 lg:max-w-xl">
                     <form onSubmit={handleSubmit} className="bg-white/5 p-8 md:p-12 rounded-[2.5rem] border border-white/10">
                         <div className="space-y-6">
+                            {submitStatus === 'success' && (
+                                <div className="p-4 bg-green-500/10 border border-green-500/20 rounded-xl text-green-400 text-sm flex items-center gap-3">
+                                    <Check className="w-5 h-5 shrink-0" />
+                                    Thank you for your message! We'll get back to you soon.
+                                </div>
+                            )}
+                            {submitStatus === 'error' && (
+                                <div className="p-4 bg-red-500/10 border border-red-500/20 rounded-xl text-red-400 text-sm">
+                                    There was an error sending your message. Please try again or email us directly.
+                                </div>
+                            )}
                             <div>
                                 <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2">Name</label>
                                 <input
@@ -117,8 +160,12 @@ export const ContactPage: React.FC = () => {
                                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                                 />
                             </div>
-                            <Button type="submit" variant="primary" hasArrow className="w-full justify-center">
-                                Send Message
+                            <Button type="submit" variant="primary" disabled={isSubmitting} className="w-full justify-center h-14">
+                                {isSubmitting ? (
+                                    <><Loader2 className="w-5 h-5 mr-3 animate-spin" /> Sending...</>
+                                ) : (
+                                    <>Send Message</>
+                                )}
                             </Button>
                         </div>
                     </form>
