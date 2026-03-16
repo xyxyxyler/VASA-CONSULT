@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { HomePage } from './pages/HomePage';
@@ -68,6 +69,7 @@ const App: React.FC = () => {
           <div className="fixed top-1/4 left-0 w-full h-[1px] bg-white/5 -rotate-6 pointer-events-none z-0"></div>
           <div className="fixed top-3/4 right-0 w-2/3 h-[1px] bg-white/5 rotate-12 pointer-events-none z-0"></div>
         </div>
+        <Analytics />
       </Router>
     </LanguageProvider>
   );
