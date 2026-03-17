@@ -4,8 +4,8 @@ import { useSEO } from '../hooks/useSEO';
 
 export const ServicesPage: React.FC = () => {
     useSEO(
-        "Our Consulting Services | VASA CONSULT Accra",
-        "Explore our range of services including strategic operations, financial advisory, and CX transformation designed for businesses in Ghana."
+        "CX Transformation & Strategic Operations | VASA CONSULT",
+        "VASA CONSULT delivers expert guidance in customer experience (CX) transformation, digital innovation, and strategic operations management to scale your business."
     );
 
     return (
