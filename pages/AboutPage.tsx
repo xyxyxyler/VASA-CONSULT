@@ -3,8 +3,13 @@ import { Asterisk } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { Values } from '../components/Values';
 import { Team } from '../components/Team';
+import { useSEO } from '../hooks/useSEO';
 
 export const AboutPage: React.FC = () => {
+    useSEO(
+        "About VASA CONSULT | Business Transformation Experts in Ghana",
+        "Learn about VASA CONSULT's mission, vision, and the expert team driving business operational excellence and strategy across Accra."
+    );
     const { t } = useLanguage();
 
     return (
