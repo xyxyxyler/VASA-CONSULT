@@ -12,6 +12,7 @@ import { ContactPage } from './pages/ContactPage';
 import { EnrollmentPage } from './pages/EnrollmentPage';
 import { SeminarPage } from './pages/SeminarPage';
 import { ConsultationPage } from './pages/ConsultationPage';
+import { EventsPage } from './pages/EventsPage';
 import { LanguageProvider } from './context/LanguageContext';
 
 // Scroll to top on route change
@@ -54,6 +55,7 @@ const App: React.FC = () => {
                 <Route path="/partners" element={<PartnersPage />} />
                 <Route path="/why-us" element={<WhyUsPage />} />
                 <Route path="/reviews" element={<ReviewsPage />} />
+                <Route path="/events" element={<EventsPage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/enroll" element={<EnrollmentPage />} />

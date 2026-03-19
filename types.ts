@@ -21,3 +21,13 @@ export interface BentoCardProps {
     imageSrc?: string;
     customContent?: React.ReactNode;
 }
+
+export interface ConsultationEvent {
+    id: string;
+    title: string;
+    description: string;
+    date: string;
+    type: 'upcoming' | 'recent';
+    imageSrc?: string;
+    link?: string;
+}

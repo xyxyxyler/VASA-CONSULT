@@ -16,6 +16,7 @@ const translations: Translations = {
     'nav.whyUs': { en: 'Why us', fr: 'Pourquoi nous' },
     'nav.reviews': { en: 'Testimonials', fr: 'Témoignages' },
     'nav.about': { en: 'About', fr: 'À propos' },
+    'nav.events': { en: 'Events', fr: 'Événements' },
     'nav.contact': { en: 'Contact us', fr: 'Contactez-nous' },
     'nav.enroll': { en: 'Enroll Now', fr: "S'inscrire" },
 
@@ -69,6 +70,14 @@ const translations: Translations = {
 
     // Reviews / Testimonials
     'reviews.title': { en: 'What People Say', fr: 'Ce que disent les gens' },
+
+    // Events
+    'events.widget.title': { en: 'Upcoming & Recent Events', fr: 'Événements Récents et à Venir' },
+    'events.widget.subtitle': { en: 'Discover our masterclasses, summits, and past engagements.', fr: 'Découvrez nos masterclass, sommets et engagements passés.' },
+    'events.type.upcoming': { en: 'Upcoming', fr: 'À venir' },
+    'events.type.recent': { en: 'Recent', fr: 'Récent' },
+    'events.btn.view_all': { en: 'View All Events', fr: 'Voir Tous Les Événements' },
+    'events.btn.learn_more': { en: 'Learn More', fr: 'En Savoir Plus' },
 
     // About Page
     'about.title': { en: 'About VASA Consultancy.', fr: 'À Propos de VASA Consultancy.' },
