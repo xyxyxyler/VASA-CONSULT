@@ -70,9 +70,10 @@ export const BentoGrid: React.FC = () => {
 
     const welcomeTitles = [t('bento.welcome.title1'), t('bento.welcome.title2')];
     const imageTitles = [t('bento.ready.title1'), t('bento.ready.title2')];
+    const imageLinks = ['/enroll', '/seminar'];
     const images = [
-        "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-        "https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+        "/images/WhatsApp Image 2026-01-22 at 9.02.14 PM.jpeg",
+        "/images/WhatsApp Image 2026-01-22 at 8.58.44 PM(1).jpeg"
     ];
 
     return (
@@ -100,6 +101,7 @@ export const BentoGrid: React.FC = () => {
                 />
 
                 {/* Global Reach Card */}
+                <Link to="/partners">
                 <BentoCard
                     variant="light"
                     className="aspect-square"
@@ -125,8 +127,10 @@ export const BentoGrid: React.FC = () => {
                         </div>
                     }
                 />
+                </Link>
 
                 {/* Why Choose Card */}
+                <Link to="/why-us">
                 <BentoCard
                     variant="dark-outline"
                     title="Why choose VASA?"
@@ -141,6 +145,7 @@ export const BentoGrid: React.FC = () => {
                         </div>
                     }
                 />
+                </Link>
             </div>
 
             {/* Column 2 */}
@@ -210,9 +215,9 @@ export const BentoGrid: React.FC = () => {
                                         <div key={i} className={`w-2 h-2 rounded-full transition-colors ${imageSlide === i ? 'bg-white' : 'bg-white/30'}`} />
                                     ))}
                                 </div>
-                                <button className="bg-white text-black p-3 rounded-full hover:scale-110 transition-transform">
+                                <Link to={imageLinks[imageSlide]} className="bg-white text-black p-3 rounded-full hover:scale-110 transition-transform inline-flex">
                                     <ArrowUpRight className="w-4 h-4" />
-                                </button>
+                                </Link>
                             </div>
                             <h3 className="text-2xl font-medium text-white key={imageSlide} animate-fade-in">{imageTitles[imageSlide]}</h3>
                         </div>
